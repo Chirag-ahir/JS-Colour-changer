@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://e7.pngegg.com/pngimages/513/135/png-clipart-color-wheel-complementary-colors-primary-color-palette-colour-wheel-blue-white-thumbnail.png">
+    <title>Body colour changer</title>
+</head>
+<body>
+    <section>  
+        <button>Change BG Color</button>  
+        <h2></h2>  
+    </section>  
+
+    <script>
+        const button = document.querySelector("button");  
+        const h2 = document.querySelector("h2");  
+        const bg = document.querySelector("section");  
+        button.addEventListener("click", () => {  
+            let color = "#";  
+            color += Math.random().toString(15).slice(2, 8).toUpperCase();  
+            bg.style.backgroundColor = color;  
+            h2.innerText = color;  
+        });  
+    </script>
+</body>
+</html>
